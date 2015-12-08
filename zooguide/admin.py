@@ -1,14 +1,10 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Animals
+from .models import Animals, Exhibits, Schedule
 
 admin.site.register(Animals)
 
-from .models import Exhibits
-
 admin.site.register(Exhibits)
 
-from .models import Tips
-
-admin.site.register(Tips)
+admin.site.register(Schedule)

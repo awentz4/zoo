@@ -10,7 +10,7 @@ from django.conf import settings
 
 #You need to change the next line to your app.models and import the name of the models in there.
 
-from zooguide.models import Animals, Exhibits, Tips
+from zooguide.models import Animals, Exhibits, Schedule
 
 from django.template.defaultfilters import slugify, urlize
 
@@ -32,8 +32,13 @@ for row in reader:
     awardswon = row[3]
     lateattract = row[4]
     ilink = row[5]
+    
 reader = csv.reader(open("schedule.csv", "rU"), dialect=csv.excel)
 reader.next()
+    timeofday = row[0]
+    event = row[1]
+    location = row[2]
+
     #integerexample = int(row[1])
     #floatexample = float(row[2])
     #dateparseexample = time.strptime(row[3], "%m/%d/%Y %H:%M")
