@@ -16,14 +16,26 @@ from django.template.defaultfilters import slugify, urlize
 
 django.setup()
 
-reader = csv.reader(open("salaries1314.csv", "rU"), dialect=csv.excel)
+reader = csv.reader(open("animals.csv", "rU"), dialect=csv.excel)
 reader.next()
 for row in reader:
-    textexample = row[0]
-    integerexample = int(row[1])
-    floatexample = float(row[2])
-    dateparseexample = time.strptime(row[3], "%m/%d/%Y %H:%M")
-    dateexample = datetime.datetime(dateparseexample.tm_year, dateparseexample.tm_mon, dateparseexample.tm_mday, dateparseexample.tm_hour, dateparseexample.tm_min)
-    modnam, modnamcreated = ModelName.objects.get_or_create(name=row[4], attribute=row[5])
-    anothermod, anothermodcreated = AnotherModel.objects.get_or_create(model=modnam, other_attribute=row[7])
-    print anothermod
+    exhibitname = row[0]
+    animalname = row[1]
+
+reader = csv.reader(open("exhibits.csv", "rU"), dialect=csv.excel)
+reader.next()
+for row in reader:
+    #textexample = row[0]
+    exhibitname = row[0]
+    datefounded = row[1]
+    cost = row[2]
+    awardswon = row[3]
+    lateattract = row[4]
+    ilink = row[5]
+    #integerexample = int(row[1])
+    #floatexample = float(row[2])
+    #dateparseexample = time.strptime(row[3], "%m/%d/%Y %H:%M")
+    #dateexample = datetime.datetime(dateparseexample.tm_year, dateparseexample.tm_mon, dateparseexample.tm_mday, dateparseexample.tm_hour, dateparseexample.tm_min)
+    #modnam, modnamcreated = ModelName.objects.get_or_create(name=row[4], attribute=row[5])
+    #anothermod, anothermodcreated = AnotherModel.objects.get_or_create(model=modnam, other_attribute=row[7])
+    #print anothermod
