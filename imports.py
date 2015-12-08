@@ -32,6 +32,8 @@ for row in reader:
     awardswon = row[3]
     lateattract = row[4]
     ilink = row[5]
+reader = csv.reader(open("schedule.csv", "rU"), dialect=csv.excel)
+reader.next()
     #integerexample = int(row[1])
     #floatexample = float(row[2])
     #dateparseexample = time.strptime(row[3], "%m/%d/%Y %H:%M")

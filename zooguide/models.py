@@ -18,3 +18,8 @@ class Tips(models.Model):
     #exhibits = models.ManyToManyField(Exhibits)
     #tip_date = DateTimeField(auto_now)
     
+class Schedule(models.Models):
+    time = models.CharField(max_length=35)
+    animal_encounter.TextField(max_length=100)
+    location.TextField(max_length=100)
+    
