@@ -8,7 +8,3 @@ admin.site.register(Animals)
 from .models import Exhibits
 
 admin.site.register(Exhibits)
-
-from .models import Tips
-
-admin.site.register(Tips)

@@ -11,10 +11,15 @@ class Exhibits(models.Model):
     exhibit_awards = models.TextField(max_length=200, default='default')
     exhibit_latest = models.TextField(max_length=200, default='default')
     exhibit_ilink = models.TextField(max_length=200, default='default')
+    
+class Schedule(models.Models):
+    time = models.CharField(max_length=35)
+    animal_encounter.TextField(max_length=100)
+    location.TextField(max_length=100)
 
-class Tips(models.Model):
-    tip_title = models.CharField(max_length=35)
-    tip_text = models.TextField()
+#class Tips(models.Model):
+    #tip_title = models.CharField(max_length=35)
+    #tip_text = models.TextField()
     #exhibits = models.ManyToManyField(Exhibits)
     #tip_date = DateTimeField(auto_now)
     
