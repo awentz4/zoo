@@ -38,6 +38,7 @@ reader.next()
     timeofday = row[0]
     event = row[1]
     location = row[2]
+
     #integerexample = int(row[1])
     #floatexample = float(row[2])
     #dateparseexample = time.strptime(row[3], "%m/%d/%Y %H:%M")
