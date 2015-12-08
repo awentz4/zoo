@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from zooguide.models import Animals, Exhibits
+from zooguide.models import Animals, Exhibits, Schedule
 
 def homepage(request):
     exhibits = Exhibits.objects.order_by('exhibit_name')
