@@ -5,10 +5,11 @@ from zooguide.models import Animals, Exhibits, Schedule
 
 def homepage(request):
     exhibits = Exhibits.objects.order_by('exhibit_name')
+    context = {"exhibits":exhibits}
     return render(request, 'index.html', context)
 
 
-#def countydetail(request, county_slug):
-#    county = County.objects.get(name_slug=county_slug)
-#    lakes = Lake.objects.filter(county=county)
-#    return render(request, 'reports/countydetail.html', {'county': #county, 'lakes':lakes})
+def exhibitdetail(request, exhibit_number):
+    exhibit = Exhibits.objects.get(id=exhibit_number)
+    context = {"exhibit":exhibit}
+    return render(request, 'exhibitdetail.html', context)
