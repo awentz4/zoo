@@ -2,6 +2,13 @@
 
 {% block content %}
 
-{{ exhibit.exhibit_name }}
+<h1>{{ exhibit.exhibit_name }}</h1>
+
+
+<ul>{% for animal in exhibit.animals.all %}
+
+<li>{{ animal }}</li>
+
+{% endfor %}</ul>
 
 {% endblock %}
