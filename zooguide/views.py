@@ -22,3 +22,8 @@ def schedule(request):
     context = {"schedule":schedule}
     return render(request, 'schedule.html', context)
 
+def about(request):
+    context = {"about":about}
+    return render(request, 'about.html', context)
+
+

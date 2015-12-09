@@ -599,3 +599,25 @@ h1 {
     height: 300px;
     width: auto;
 }
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+ul {
+    list-style-type: none;
+}
+p {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
