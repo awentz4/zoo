@@ -17,7 +17,7 @@ class Exhibits(models.Model):
     def __unicode__(self):
         return self.exhibit_name
     def get_absolute_url(self):
-        return "/exhibit/%i" % self.id
+        return "/exhibits/%i" % self.id
     
 class Schedule(models.Model):
     time = models.DateTimeField()
