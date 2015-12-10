@@ -4,25 +4,26 @@
 
 <h1>{{ exhibit.exhibit_name }}</h1>
 
-<br>
-<br>
-<h2>Animals on Display</h2>
-<ul>{% for animal in exhibit.animals.all %}
+<h2 class="exhibit_aod">Animals on Display</h2>
 
  <div class="container">
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
+          {% for animal in exhibit.animals.all %}
+
         <div class="col-lg-4">
-          <img class="img-circle" src="/static/images/ScottSign.jpg" alt="Scott Aquarium Sign" width="140" height="140">
-            <h2><li>{{ animal }}</li></h2>
+          <img class="img-circle" src="/static/images/{{ animal|slugify }}.jpg" alt="Scott Aquarium Sign" width="140" height="140">
+            <h2>{{ animal }}</h2>
           <p></p>
-        </div><!-- /.col-lg-4 -->
+        </div>
+          <!-- /.col-lg-4 -->
+          {% endfor %}
+
       </div><!-- /.row -->
     </div>
 </div>
     
-{% endfor %}</ul>
 
 {% endblock %}
