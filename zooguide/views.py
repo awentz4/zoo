@@ -19,6 +19,7 @@ def exhibitlist(request):
     return render(request, 'exhibits.html', context)
 
 def schedule(request):
+    schedule = Schedule.objects.order_by('time')
     context = {"schedule":schedule}
     return render(request, 'schedule.html', context)
 
