@@ -2,13 +2,40 @@
 
 {% block content %}
 
-<h1>{{ exhibit.exhibit_name }}</h1>
+<h1 class="exhibit_aod">{{ exhibit.exhibit_name }}</h1>
 
+<p>Opened on {{ exhibit.exhibit_date }}</p>
 
-<ul>{% for animal in exhibit.animals.all %}
+<p>Cost: ${{ exhibit.exhibit_cost }}</p>
 
-<li>{{ animal }}</li>
+<p>{{ exhibit.description }}</p>
 
-{% endfor %}</ul>
+<p>Awards won: {{ exhibit.exhibit_awards }}</p>
+
+<p>Latest attraction: {{ exhibit.exhibit_latest }}</p>
+
+<p>More info: {{ exhibit.exhibit_ilink }}</p>
+
+<h2 class="exhibit_aod">Animals on Display</h2>
+
+ <div class="container">
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+          {% for animal in exhibit.animals.all %}
+
+        <div class="col-lg-4">
+          <img class="img-circle" src="/static/images/{{ animal|slugify }}.jpg" alt="Scott Aquarium Sign" width="140" height="140">
+            <h2>{{ animal }}</h2>
+          <p></p>
+        </div>
+          <!-- /.col-lg-4 -->
+          {% endfor %}
+
+      </div><!-- /.row -->
+    </div>
+</div>
+    
 
 {% endblock %}

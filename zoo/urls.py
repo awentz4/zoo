@@ -20,5 +20,9 @@ from zooguide import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.homepage),
-    url(r'exhibit/(?P<exhibit_number>\d+)/$', views.exhibitdetail),
+    url(r'exhibits/(?P<exhibit_number>\d+)/$', views.exhibitdetail),
+    url(r'exhibits/$', views.exhibitlist),
+    url(r'schedule/$', views.schedule),
+    url(r'about/$', views.about),
+    url(r'index/$', views.homepage),
 ]
