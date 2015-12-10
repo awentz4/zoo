@@ -2,9 +2,19 @@
 
 {% block content %}
 
-<h1>{{ exhibit.exhibit_name }}</h1>
+<h1 class="exhibit_aod">{{ exhibit.exhibit_name }}</h1>
+
+<p>Opened on {{ exhibit.exhibit_date }}</p>
+
+<p>Cost: ${{ exhibit.exhibit_cost }}</p>
 
 <p>{{ exhibit.description }}</p>
+
+<p>Awards won: {{ exhibit.exhibit_awards }}</p>
+
+<p>Latest attraction: {{ exhibit.exhibit_latest }}</p>
+
+<p>More info: {{ exhibit.exhibit_ilink }}</p>
 
 <h2 class="exhibit_aod">Animals on Display</h2>
 
