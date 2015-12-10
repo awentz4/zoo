@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<h1 class="exhibit_aod">Today's Schedule</h1>
+<h1 class="exhibit_aod">Weekly Schedule</h1>
 
 {% for object in schedule %}
 
-<h2>{{ object.time }}: {{ object.title }}</h2>
+<h2>{{ object.time|date:"g a" }}: {{ object.title }}</h2>
 <p>{% for location in object.location.all %}{{ location }}{% endfor %}</p>
 <p>{{ object.description }}</p>
 
